@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body-theme">
+    <!-- Event Handling -->
+    <div class="hover-box">
+        <p class="hover-box-content">Hover over me!</p>
+    </div>
+    <br><br><br>
+    <button id="clickBtn">Click Me!</button>
+    <br><br><br>
+    <button id="keyOutput">Press any key to reveal the key you have pressed: </button>
+    <br><br><br>
+    <button id="secret" ondblclick="revealSecret()">Double-click me</button>
+    <br><br><br>
+    
+
+    <!-- Interactive Elements -->
+    <button id="colorBtn">Click to change color</button>
+    <br>
+    <br>
+
+    <div class="gallery">
+        <img src="image1.jpg" class="slide active">
+        <img src="image2.jpg" class="slide">
+        <img src="image3.jpg" class="slide">
+        <div class="gallery-controls">
+            <button id="prevBtn" class="image-button">Previous</button>
+            <button id="nextBtn" class="image-button ">Next</button>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button onclick="showTab(1)">Tab 1</button>
+        <button onclick="showTab(2)">Tab 2</button>
+        <br>
+        <div class="tab-content active">Here you have access to content in tab 1</div>
+        <div class="tab-content">Here you have access to content in tab 2</div>
+    </div>
+
+    <!-- Form Validation -->
+     <h1>Form Filling</h1>
+        
+     <form id="myForm">
+        <h2>Name:</h2>
+        <input type="text" id="name" placeholder="Name"  class="form-container" required>
+        <div class="error" id="nameError">Name is required</div>
+        <br>
+        <h2>Email</h2>
+        <input type="email" id="email" placeholder="Email" class="form-container" required>
+        <div class="error" id="emailError">Invalid email</div>
+        <br>
+        <h2>Password:</h2>
+        <input type="password" id="password" placeholder="Password" class="form-container">
+        <div class="error" id="passError">Minimum 8 characters</div>
+        <br>
+        
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
